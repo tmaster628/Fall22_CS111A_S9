@@ -7,9 +7,11 @@
 #include <thread>
 #include <string>
 #include <mutex>
+#include <ctime>
+
 using namespace std;
 
-static const int K_NUM_FULL = 20;
+static const int K_NUM_FULL = 200000;
 
 struct Data {
     int num1 = 0;
@@ -27,7 +29,6 @@ void fillStruct (struct Data &d) {
             break;
         }
     }
-
 }
 
 /**
@@ -36,12 +37,22 @@ void fillStruct (struct Data &d) {
 */
 int main() {
 
-    thread arr[2];
+    // Timer setup.
+    clock_t start = clock();
+
+    thread arr[2]; // Unused!
     Data usr_data;
 
-    fillStruct (usr_data);
+
+    // Fill struct here!
+    fillStruct(usr_data);
+    
+    clock_t end = clock();
 
     cout << "All done! Here is the state of usr_data now..." << endl;
     cout << "{ "<< usr_data.num1 << ", " << usr_data.num2 << " }" << endl;
+    
+    cout << "This operation took " << end - start << " cycles." << endl;
+
     return 0;
 }
