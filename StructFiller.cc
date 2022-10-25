@@ -41,7 +41,7 @@ int main() {
 
     fillStruct (usr_data);
 
-    cout << "All done! Here is the state of DATA now..." << endl;
+    cout << "All done! Here is the state of usr_data now..." << endl;
     cout << "{ "<< usr_data.num1 << ", " << usr_data.num2 << " }" << endl;
     return 0;
 }
