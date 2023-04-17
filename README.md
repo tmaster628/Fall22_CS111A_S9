@@ -1,5 +1,5 @@
 # CS111A Section 9
-_CS111A Code Repository for Section 9 (Fall 2022)_
+_CS111A Code Repository for Section 3 (Updated for Spring 2023)_
 
 Welcome back to CS111A! Today we'll be diving into the world of multithreading! 
 
