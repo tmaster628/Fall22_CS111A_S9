@@ -26,7 +26,6 @@ void fillStruct (struct Data &d) {
         } else if (d.num2 < K_NUM_FULL) {
             d.num2++;
         } else {
-            lock.unlock();
             break;
         }
     }
