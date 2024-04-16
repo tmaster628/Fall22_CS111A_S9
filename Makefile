@@ -17,7 +17,6 @@ all: $(TARGETS)
 
 $(OBJS): $(HEADERS)
 
-
 # test_submission: test_submission.cc
 # 	$(CXX) -o $@ $^
 
@@ -28,7 +27,8 @@ $(OBJS): $(HEADERS)
 # 	$(CXX) -o $@ $^
 
 StructFiller: $(OBJS) $(LIB)
-	$(CXX) -o $@ $^
+	$(CXX) $(CXXFLAGS) $< -pthread -o $@
+#	$(CXX) -o $@ $^
 
 #RunMain: $(OBJS) $(LIB)
 #	$(CXX) -o $@ $(OBJS)

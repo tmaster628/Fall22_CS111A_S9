@@ -26,10 +26,12 @@ void fillStruct (struct Data &d) {
         } else if (d.num2 < K_NUM_FULL) {
             d.num2++;
         } else {
+            lock.unlock();
             break;
         }
     }
 }
+
 
 /**
  * MAIN() spins up 2 threads. These threads must work together
@@ -42,7 +44,6 @@ int main() {
 
     thread arr[2]; // Unused!
     Data usr_data;
-
 
     // Fill struct here!
     fillStruct(usr_data);
